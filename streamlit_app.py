@@ -64,7 +64,7 @@ data={'no_of_dependents':no_of_dependents,
         'Assets':Assets}
   input_df=  pd.DataFrame(data, index=[0])
   input_loan = pd.concat([input_df, x_raw], axis=0)
-  input_loan
+  
 
 
 with st.expander("Input Features"):
