@@ -13,6 +13,7 @@ with st.expander('Data'):
   loan
   st.write('**x data-Input features**') 
   x = loan.drop([' loan_status','loan_id'], axis=1)
+  x
   
  
   st.write('**Y data-Output features**') 
