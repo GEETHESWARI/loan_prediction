@@ -65,10 +65,22 @@ with st.sidebar:
   input_df=  pd.DataFrame(data, index=[0])
   input_loan = pd.concat([input_df, x_raw], axis=0)
   input_loan
-  #Encode
+  #Encode X
   encode=['education','self_employed']
   df_loan=pd.get_dummies(input_loan,prefix=encode)
   input_row=df_loan[:1]
+
+
+  # Encode y
+   target_mapper = {' Rejected':0,
+                    ' Approved': 1}
+
+   def target_encode(val):
+      return target_mapper[val]
+
+    y = y_raw.apply(target_encode)
+    y
+    y_raw
   
 with st.expander("Input Features"):
   st.write("Input features")
