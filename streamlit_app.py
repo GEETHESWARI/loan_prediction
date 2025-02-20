@@ -30,7 +30,7 @@ with st.expander('Data Visualization'):
   with tab2:
     st.bar_chart(loan, x=" self_employed", y=" loan_amount", color=" loan_status", stack=False)
   with tab3:  
-   st.line_chart(loan, x=' loan_term', y=' cibil_score', color=" loan_status")
+   st.bar_chart(loan, x=' loan_term', y=' cibil_score', color=" loan_status")
   
 
 
