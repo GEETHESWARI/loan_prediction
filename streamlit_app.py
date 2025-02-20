@@ -65,14 +65,16 @@ with st.sidebar:
   input_df=  pd.DataFrame(data, index=[0])
   input_loan = pd.concat([input_df, x_raw], axis=0)
   input_loan
+  #Encode
+  encode=['education','self_employed']
+  df_loan=pd.get_dummies(input_loan,prefix=encode)
+  input_row=df_loan[:1]
   
 with st.expander("Input Features"):
   st.write("Input features")
   input_loan
 
-#Encode
-  encode=['education','self_employed']
-  loan=pd.get_dummies(input_loan,prefix=encode)
+
 
   
 
