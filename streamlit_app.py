@@ -20,4 +20,16 @@ with st.expander('Data'):
   y= loan[' loan_status']
   y
 
+with st.expander('Data Visualization'):
+  edu=st.bar_chart(source, x=" education", y=" loan_amount", color=" loan_status", stack=False)
+
+
+
+
+
+tab1=st.tabs(["Education Vs Loan amt "])
+  with tab1:
+   st.plotly_chart(edu, theme=None,use_container_width=True)
+  
+
 
