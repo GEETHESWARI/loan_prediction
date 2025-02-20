@@ -12,9 +12,10 @@ with st.expander('Data'):
   loan=pd.read_csv("https://raw.githubusercontent.com/GEETHESWARI/loan_prediction/refs/heads/master/loan_approval_dataset.csv")
   loan
   st.write('**x data-Input features**') 
+  x = loan.drop([' loan_status','loan_id'], axis=1)
   
  
   st.write('**Y data-Output features**') 
-  y= loan.loan_status
+  y= loan. loan_status
 
 
