@@ -70,6 +70,11 @@ with st.expander("Input Features"):
   st.write("Input features")
   input_loan
 
+#Encode
+  encode=['education','self_employed']
+  loan=pd.get_dummies(input_loan.prefix=encode)
+
+  
 
 
   
