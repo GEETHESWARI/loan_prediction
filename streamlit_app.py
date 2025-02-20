@@ -17,6 +17,7 @@ with st.expander('Data'):
   
  
   st.write('**Y data-Output features**') 
-  y= loan. loan_status
+  y= loan[' loan_status']
+  y
 
 
