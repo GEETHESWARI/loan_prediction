@@ -29,7 +29,7 @@ with st.expander('Data Visualization'):
 
   tab1,tab2,tab3=st.tabs(["Education Vs Loan amt ","Self_Employed vs Loanamt","Loan Term Vs Cibil Score"])
   with tab1:
-    st.bar_chart(loan, x="education", y="loan_amount", color=" loan_status", stack=False)
+    st.bar_chart(loan, x="education", y="loan_amount", color="loan_status", stack=False)
   with tab2:
     st.bar_chart(loan, x="self_employed", y="loan_amount", color="loan_status", stack=False)
   with tab3:  
