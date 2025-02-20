@@ -21,7 +21,7 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
-  edu=st.bar_chart(source, x=" education", y=" loan_amount", color=" loan_status", stack=False)
+  edu=st.bar_chart(loan, x=" education", y=" loan_amount", color=" loan_status", stack=False)
 
 
 
