@@ -41,6 +41,19 @@ with st.expander('Data Visualization'):
 
 
 
+with st.sidebar:
+  st.header("Input Features")
+  no_of_dependents= st.slider('No_of_dependents',0,2,5)
+  education= st.selectbox("Education",(' Graduate',' Not Graduate'))
+  self_employed= st.selectbox("Self_employed",(' No', ' Yes'))
+  income_annum=st.slider("Annum_Income",200000,5059123,9900000)
+  loan_amount= st.slider("Loan_amt",300000,15133451,39500000)
+  loan_term=st.slider("Loan_Term",2,11,20)
+  cibil_score=st.slider("Cibil_Score",300,600,900)
+  Assets=st.slider("Assests",400000,32548770,90700000)
+
+
+
   
 
 
