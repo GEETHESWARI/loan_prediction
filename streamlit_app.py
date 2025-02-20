@@ -60,8 +60,7 @@ with st.sidebar:
         'income_annum':income_annum,
         'loan_amount':loan_amount, 
         'loan_term':loan_term, 
-        'cibil_score':cibil_score, 
-        'loan_status':loan_status, 
+        'cibil_score':cibil_score,  
         'Assets':Assets}
   input_df=  pd.DataFrame(data, index=[0])
   input_loan = pd.concat([input_df, x_raw], axis=0)
