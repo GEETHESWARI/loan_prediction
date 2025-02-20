@@ -72,7 +72,7 @@ with st.expander("Input Features"):
 
 #Encode
   encode=['education','self_employed']
-  loan=pd.get_dummies(input_loan.prefix=encode)
+  loan=pd.get_dummies(input_loan,prefix=encode)
 
   
 
