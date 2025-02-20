@@ -54,7 +54,7 @@ with st.sidebar:
 
 
 # create a dataframe
-  data={'no_of_dependents':no_of_dependents, 
+data={'no_of_dependents':no_of_dependents, 
        'education':education, 
         'self_employed':self_employed, 
         'income_annum':income_annum,
