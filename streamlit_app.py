@@ -68,7 +68,7 @@ with st.sidebar:
   
 with st.expander("Input Features"):
   st.write("Input features")
-  inputloan
+  input_loan
 
 
 
