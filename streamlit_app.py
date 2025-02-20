@@ -73,6 +73,8 @@ with st.sidebar:
 with st.expander("Input Features"):
   st.write("Input features")
   input_loan
+  st.write("Encoded row")
+  input_row
 
 
 
