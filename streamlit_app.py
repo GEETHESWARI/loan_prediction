@@ -111,7 +111,7 @@ df_prediction_proba.rename(columns={0:' Rejected',
                                        1:' Approved'})
 
 
-st.subheader('Predicted Weather')
+st.subheader('Predicted Loan Status')
 # Display the dataframe in the first row
 with st.container():
     st.dataframe(df_prediction_proba[[' Approved', ' Rejected']], column_config={
