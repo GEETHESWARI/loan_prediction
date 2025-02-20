@@ -15,13 +15,13 @@ with st.expander('Data'):
   loan.columns
   
   st.write('**x data-Input features**') 
-  x = loan.drop([' loan_status','loan_id'], axis=1)
-  x
+  x_raw = loan.drop(['loan_status','loan_id'], axis=1)
+  x_raw
   
  
   st.write('**Y data-Output features**') 
-  y= loan[' loan_status']
-  y
+  y_raw= loan['loan_status']
+  y_raw
 
 with st.expander('Data Visualization'):
 
@@ -29,11 +29,11 @@ with st.expander('Data Visualization'):
 
   tab1,tab2,tab3=st.tabs(["Education Vs Loan amt ","Self_Employed vs Loanamt","Loan Term Vs Cibil Score"])
   with tab1:
-    st.bar_chart(loan, x=" education", y=" loan_amount", color=" loan_status", stack=False)
+    st.bar_chart(loan, x="education", y="loan_amount", color=" loan_status", stack=False)
   with tab2:
-    st.bar_chart(loan, x=" self_employed", y=" loan_amount", color=" loan_status", stack=False)
+    st.bar_chart(loan, x="self_employed", y="loan_amount", color="loan_status", stack=False)
   with tab3:  
-   st.bar_chart(loan, x=' loan_term', y=' cibil_score', color=" loan_status")
+   st.bar_chart(loan, x='loan_term', y='cibil_score', color="loan_status")
   
 
 
