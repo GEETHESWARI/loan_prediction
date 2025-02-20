@@ -53,6 +53,25 @@ with st.sidebar:
   Assets=st.slider("Assests",400000,32548770,90700000)
 
 
+# create a dataframe
+  data={'no_of_dependents':no_of_dependents, 
+       'education':education, 
+        'self_employed':self_employed, 
+        'income_annum':income_annum,
+        'loan_amount':loan_amount, 
+        'loan_term':loan_term, 
+        'cibil_score':cibil_score, 
+        'loan_status':loan_status, 
+        'Assets':Assets}
+  input_df=  pd.DataFrame(data, index=[0])
+  input_loan = pd.concat([input_df, x_raw], axis=0)
+  input_loan
+  
+with st.expand("Input Features"):
+  st.write("Input features")
+  inputloan
+
+
 
   
 
