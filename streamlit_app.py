@@ -21,18 +21,12 @@ with st.expander('Data'):
   y
 
 with st.expander('Data Visualization'):
-  edu=st.bar_chart(loan, x=" education", y=" loan_amount", color=" loan_status", stack=False)
-  selfemp=st.bar_chart(loan, x=" self_employed", y=" loan_amount", color=" loan_status", stack=False)
-  
-  
-  
-  
-  
+
   tab1,tab2=st.tabs(["Education Vs Loan amt ","Self_Employed vs Loanamt"])
   with tab1:
-    st.plotly_chart(edu, theme=None,use_container_width=True)
+    st.bar_chart(loan, x=" education", y=" loan_amount", color=" loan_status", stack=False)
   with tab2:
-    st.plotly_chart(selfemp, theme=None,use_container_width=True)  
+    st.bar_chart(loan, x=" self_employed", y=" loan_amount", color=" loan_status", stack=False)  
   
 
 
