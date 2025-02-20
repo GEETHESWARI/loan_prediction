@@ -11,7 +11,7 @@ with st.expander('Data'):
   st.write("**Weather data**")
   loan=pd.read_csv("https://raw.githubusercontent.com/GEETHESWARI/loan_prediction/refs/heads/master/loan_approval_dataset.csv")
   loan
-  def info_loan()
+  def info_loan():
       loan_info=loan.info()
       return loan_info
   st.write(info_loan())
