@@ -8,11 +8,11 @@ st.title('Loan Prediction')
 st.info(' This Machine learning Model predicts whether Loan will be aproved or Rejected')
 
 with st.expander('Data'):
-  st.write("**Weather data**")
+  st.write("**Loan data**")
   loan=pd.read_csv("https://raw.githubusercontent.com/GEETHESWARI/loan_prediction/refs/heads/master/loan_approval_dataset.csv")
   
   loan.columns=loan.columns.str.strip()
-  loan.columns
+  
   loan["Assets"]=loan.residential_assets_value+loan.commercial_assets_value+loan.luxury_assets_value+loan.bank_asset_value
   loan.drop(columns=['residential_assets_value',
        'commercial_assets_value', 'luxury_assets_value', 'bank_asset_value'],inplace=True)
