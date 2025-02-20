@@ -65,9 +65,19 @@ with st.sidebar:
   input_df=  pd.DataFrame(data, index=[0])
   input_loan = pd.concat([input_df, x_raw], axis=0)
   input_loan
+
+
+with st.expander("Input Features"):
+  st.write("Input features")
+  input_loan
+  
+  
+  
+  #Data Preparation
   #Encode X
   encode=['education','self_employed']
   df_loan=pd.get_dummies(input_loan,prefix=encode)
+  x=df_loan[1:]
   input_row=df_loan[:1]
 
 
@@ -79,14 +89,52 @@ def target_encode(val):
     return target_mapper[val]
 
 y = y_raw.apply(target_encode)
-y
-y_raw
-  
-with st.expander("Input Features"):
-  st.write("Input features")
-  input_loan
-  st.write("Encoded row")
+
+with st.expander("Data Preparation"):
+  st.write("Encoded X ")
   input_row
+  st.write("Encoded Y")
+  y
+
+# Model training and inference
+## Train the ML model
+clf = RandomForestClassifier()
+clf.fit(x, y)
+
+## Apply model to make predictions
+prediction = clf.predict(input_row)
+prediction_proba = clf.predict_proba(input_row)
+
+df_prediction_proba = pd.DataFrame(prediction_proba)
+df_prediction_proba.columns = [' Approved', ' Rejected']
+df_prediction_proba.rename(columns={0:' Rejected',
+                                       1:' Approved'})
+
+
+st.subheader('Predicted Weather')
+# Display the dataframe in the first row
+with st.container():
+    st.dataframe(df_prediction_proba[[' Approved', ' Rejected']], column_config={
+        ' Approved': st.column_config.ProgressColumn(
+            ' Approved',
+            format='%f',
+            width='medium',
+            min_value=0,
+            max_value=1
+        ),
+        ' Rejected': st.column_config.ProgressColumn(
+            ' Rejected',
+            format='%f',
+            width='medium',
+            min_value=0,
+            max_value=1
+        )
+    }, hide_index=True)
+
+
+loan_pred = np.array([' Approved', ' Rejected'])
+st.success(str(loan_pred[prediction][0]))
+
 
 
 
