@@ -27,9 +27,9 @@ with st.expander('Data Visualization'):
 
 
 
-tab1=st.tabs(["Education Vs Loan amt "])
+  tab1=st.tabs(["Education Vs Loan amt "])
   with tab1:
-   st.plotly_chart(edu, theme=None,use_container_width=True)
+    st.plotly_chart(edu, theme=None,use_container_width=True)
   
 
 
