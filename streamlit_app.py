@@ -72,15 +72,15 @@ with st.sidebar:
 
 
   # Encode y
-   target_mapper = {' Rejected':0,
+target_mapper = {' Rejected':0,
                     ' Approved': 1}
 
-   def target_encode(val):
-      return target_mapper[val]
+def target_encode(val):
+    return target_mapper[val]
 
-    y = y_raw.apply(target_encode)
-    y
-    y_raw
+y = y_raw.apply(target_encode)
+y
+y_raw
   
 with st.expander("Input Features"):
   st.write("Input features")
