@@ -66,7 +66,7 @@ with st.sidebar:
   input_loan = pd.concat([input_df, x_raw], axis=0)
   input_loan
   
-with st.expand("Input Features"):
+with st.expander("Input Features"):
   st.write("Input features")
   inputloan
 
