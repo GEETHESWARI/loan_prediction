@@ -34,7 +34,7 @@ This web application predicts loan eligibility using machine learning and provid
 
 ## Loan Prediction App
 
-[![Streamlit App](https://ml-loan-prediction.streamlit.app/)
+[![Streamlit App] https://ml-loan-prediction.streamlit.app/
 
 ## GitHub Codespaces
 
