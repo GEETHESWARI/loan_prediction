@@ -38,13 +38,7 @@ This web application predicts loan eligibility using machine learning and provid
 
 ## GitHub Codespaces
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
+[![Open in GitHub Codespaces]https://github.com/GEETHESWARI/Loan_Prediction_code/blob/main/Loan%20Approval%20prediction.ipynb
 
 
 
-## Further Reading
-
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
